@@ -12,8 +12,9 @@ namespace Hockey.Data
         private int _heightInInches;
         private int _weightInPounds;
 
-        private Position _position;
-        private Shot _shot;
+        //we do not need this
+        //private Position _position;
+        //private Shot _shot;
 
 
         // properties
@@ -124,10 +125,30 @@ namespace Hockey.Data
             }
         }
 
+        //Auto-implemented property
+
+        /// <summary>
+        /// Represents the position for a player
+        /// </summary>
         public Position Position { get; set; }
 
+        /// <summary>
+        /// Represents the shot hand for a player
+        /// </summary>
         public Shot Shot { get; set; }
 
         // constructors
+        public HockeyPlayer(string firstName, string lastName, string birthPlace, DateOnly dateOfBirth,
+                            int weightInPounds, int heightInInches, Shot shot, Position position)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthPlace = birthPlace;
+            DateOfBirth = dateOfBirth;
+            WeightInPounds = weightInPounds;
+            HeightInInches = heightInInches;
+            Position = position;
+            Shot = shot;
+        }
     }
 }
