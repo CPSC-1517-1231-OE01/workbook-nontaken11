@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using Utils;
 
 namespace Hockey.Data
 {
@@ -80,7 +81,7 @@ namespace Hockey.Data
 
             set
             {
-                if (value >= DateOnly.FromDateTime(DateTime.Now))
+                if (Utilities.IsInTheFuture(value))
                 {
                     throw new ArgumentException($"Date of birth cannot be in the future.");
                 }
@@ -98,7 +99,7 @@ namespace Hockey.Data
 
             set
             {
-                if (value <= 0)
+                if (Utilities.IsZeroOrNegative(value))
                 {
                     throw new ArgumentException($"Height must be positive.");
                 }
@@ -116,7 +117,7 @@ namespace Hockey.Data
 
             set
             {
-                if (value <= 0)
+                if (!Utilities.IsPositive(value))
                 {
                     throw new ArgumentException($"Weight must be positive.");
                 }
