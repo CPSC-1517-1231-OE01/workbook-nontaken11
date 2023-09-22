@@ -16,16 +16,10 @@ namespace Hockey.Test
         const int JerseyNumber = 28;
         const Position PlayerPosition = Position.Center;
         const Shot PlayerShot = Shot.Left;
-        // The following relies on our being correct here - not writing a test for the test expected value
+
         readonly int Age = (DateOnly.FromDateTime(DateTime.Now).DayNumber - DateOfBirth.DayNumber) / 365;
         const string ToStringValue = $"{FirstName} {LastName}";
 
-        // Can quickly run a test to check our method for AGE above
-        //[Fact]
-        //public void AGE_Is_Correct()
-        //{
-        //    AGE.Should().Be(29);
-        //}
 
         public HockeyPlayer CreateTestHockeyPlayer()
         {

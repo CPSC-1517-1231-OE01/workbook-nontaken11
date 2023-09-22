@@ -141,6 +141,18 @@ namespace Hockey.Data
             }
         }
 
+        //Auto-implemented property
+
+        /// <summary>
+        /// Represents the position for a player
+        /// </summary>
+        public Position Position { get; set; }
+
+        /// <summary>
+        /// Represents the shot hand for a player
+        /// </summary>
+        public Shot Shot { get; set; }
+
         public int JerseyNumber
         {
             get
@@ -158,18 +170,6 @@ namespace Hockey.Data
                 _jerseyNumber = value;
             }
         }
-
-        //Auto-implemented property
-
-        /// <summary>
-        /// Represents the position for a player
-        /// </summary>
-        public Position Position { get; set; }
-
-        /// <summary>
-        /// Represents the shot hand for a player
-        /// </summary>
-        public Shot Shot { get; set; }
 
         public int Age => (DateOnly.FromDateTime(DateTime.Now).DayNumber - DateOfBirth.DayNumber) / 365;
 
