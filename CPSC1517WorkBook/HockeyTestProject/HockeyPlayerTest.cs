@@ -12,7 +12,7 @@ namespace Hockey.Test
         const string BirthPlace = "Toronto, ON, CAN";
         static readonly DateOnly DateOfBirth = new DateOnly(1994, 01, 14);
         const int HeightInInches = 72;
-        const int WeightInInches = 188;
+        const int WeightInPounds = 188;
         const int JerseyNumber = 28;
         const Position PlayerPosition = Position.Center;
         const Shot PlayerShot = Shot.Left;
@@ -23,7 +23,7 @@ namespace Hockey.Test
 
         public HockeyPlayer CreateTestHockeyPlayer()
         {
-            return new HockeyPlayer(FirstName, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInInches, JerseyNumber, PlayerPosition, PlayerShot);
+            return new HockeyPlayer(FirstName, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInPounds, JerseyNumber, PlayerPosition, PlayerShot);
         }
 
         // Test data generateor for class data (see line 85 below)
@@ -32,9 +32,9 @@ namespace Hockey.Test
             private readonly List<object[]> _data = new List<object[]>
             {
                 // First Name tests
-                new object[]{"", LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInInches, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
-                new object[]{" ", LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInInches, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
-                new object[]{null, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInInches, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
+                new object[]{"", LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInPounds, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
+                new object[]{" ", LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInPounds, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
+                new object[]{null, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInPounds, JerseyNumber, PlayerPosition, PlayerShot, "First name cannot be null or empty." },
 
                 // TODO: complete remaining private set tests
             };
@@ -50,7 +50,7 @@ namespace Hockey.Test
             // Yield as many test objects as desired/required
             yield return new object[]
             {
-               FirstName, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInInches, JerseyNumber, PlayerPosition, PlayerShot,
+               FirstName, LastName, BirthPlace, DateOfBirth, HeightInInches, WeightInPounds, JerseyNumber, PlayerPosition, PlayerShot,
             };
         }
 
