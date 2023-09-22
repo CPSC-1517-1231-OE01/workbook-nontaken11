@@ -164,7 +164,7 @@ namespace Hockey.Data
             {
                 if (value < 1 || value > 98)
                 {
-                    throw new ArgumentException($"Jersey number must be between 1 and 98.");
+                    throw new ArgumentOutOfRangeException($"Jersey number must be between 1 and 98.", new ArgumentException());
                 }
 
                 _jerseyNumber = value;
