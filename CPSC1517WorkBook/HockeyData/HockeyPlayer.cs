@@ -18,6 +18,20 @@ namespace Hockey.Data
         //private Position _position;
         //private Shot _shot;
 
+        //constructors
+        public HockeyPlayer(string firstName, string lastName, string birthPlace, DateOnly dateOfBirth,
+                            int weightInPounds, int heightInInches, int jerseyNumber, Position position = Position.Center, Shot shot = Shot.Right)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthPlace = birthPlace;
+            DateOfBirth = dateOfBirth;
+            WeightInPounds = weightInPounds;
+            HeightInInches = heightInInches;
+            JerseyNumber = jerseyNumber;
+            Shot = shot;
+            Position = position;
+        }
 
         // properties
         public string FirstName
@@ -162,34 +176,6 @@ namespace Hockey.Data
         public override string ToString()
         {
             return $"{FirstName} {LastName}";
-        }
-
-        // constructors
-        public HockeyPlayer(string firstName, string lastName, string birthPlace, DateOnly dateOfBirth,
-                            int weightInPounds, int heightInInches, int jerseyNumber, Position position = Position.Center, Shot shot = Shot.Right)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            BirthPlace = birthPlace;
-            DateOfBirth = dateOfBirth;
-            WeightInPounds = weightInPounds;
-            HeightInInches = heightInInches;
-            JerseyNumber = jerseyNumber;
-            Shot = shot;
-            Position = position;
-        }
-
-        // default constructor
-        public HockeyPlayer()
-        {
-            _firstName = string.Empty;
-            _lastName = string.Empty;
-            _birthPlace = string.Empty;
-            _dateOfBirth = new DateOnly();
-            _weightInPounds = 0;
-            _heightInInches = 0;
-            Shot = Shot.Right;
-            Position = Position.Center;
         }
     }
 }
